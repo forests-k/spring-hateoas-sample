@@ -1,0 +1,22 @@
+################################################
+#
+# application.yml
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+#
+################################################
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/prototype?currentSchema=prototype
+    username: root
+    password: password
+
+  jpa:
+    database: MYSQL
+    hibernate:
+      show-sql: true
+      format_sql: trues
+      use_sql_comments: true
+      generate_statistics: false
+    database-platform: org.hibernate.dialect.MySQLDialect
