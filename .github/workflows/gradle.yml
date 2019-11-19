@@ -19,8 +19,10 @@ jobs:
     - name: actions/check Java version
       run: java -version
       shell: bash
+    - name: actions/edit chown
+      run: chmod +x gradlew
     - name: actions/check Gradle version
-      run: sudo ./gradlew -v
+      run: ./gradlew -v
       shell: bash
     - name: Build with Gradle
-      run: sudo ./gradlew build
+      run: ./gradlew build
