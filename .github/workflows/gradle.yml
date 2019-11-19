@@ -1,6 +1,9 @@
 name: SpringBoot on Java CI
 
-on: [push]
+on:
+  push:
+    branches: 
+      - maater
 
 jobs:
   build:
@@ -13,5 +16,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - name: actions/check Java version
+      run: java -version
+      shell: bash
+    - name: actions/check Gradle version
+      run: ./graglew -v
+      shell: bash
     - name: Build with Gradle
       run: ./gradlew build
