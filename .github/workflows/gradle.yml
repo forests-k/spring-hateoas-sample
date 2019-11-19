@@ -20,7 +20,7 @@ jobs:
       run: java -version
       shell: bash
     - name: actions/check Gradle version
-      run: ./graglew -v
+      run: ./gradlew -v
       shell: bash
     - name: Build with Gradle
       run: ./gradlew build
