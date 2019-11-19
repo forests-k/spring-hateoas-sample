@@ -3,7 +3,7 @@ name: SpringBoot on Java CI
 on:
   push:
     branches: 
-      - maater
+      - master
 
 jobs:
   build:
